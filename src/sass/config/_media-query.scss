@@ -1,0 +1,118 @@
+// Küçük cihazlar
+@mixin mini {
+    // 359px ve aşağısı
+    @media (max-width: 359px) {
+      @content;
+    }
+  }
+  
+  // XSMALL
+  @mixin xs {
+    // 639px ve aşağısı
+    @media (max-width: ($screen-sm - 1px)) {
+      @content;
+    }
+  }
+  
+  //SMALL
+  @mixin sm {
+    // 640px ve aşağısı
+    @media (max-width: $screen-sm) {
+      @content;
+    }
+  }
+  
+  @mixin bigger-than-sm {
+    // 640px ve yukarısı
+    @media (min-width: $screen-sm) {
+      @content;
+    }
+  }
+  
+  @mixin sm-md {
+    // 640px ile 1023px arası
+    @media (min-width: $screen-sm) and (max-width: ($screen-md - 1px)) {
+      @content;
+    }
+  }
+  
+  //MEDIUM
+  @mixin smaller-than-md {
+    // 1023px ve aşağısı
+    @media (max-width: ($screen-md - 1px)) {
+      @content;
+    }
+  }
+  
+  @mixin bigger-than-md {
+    // 1024px ve yukarısı
+    @media (min-width: $screen-md) {
+      @content;
+    }
+  }
+  
+  @mixin md {
+    // 1024px ve aşağısı
+    @media (max-width: ($screen-md - 1px)) {
+      @content;
+    }
+  }
+  
+  @mixin md-lg {
+    // 1024px ile 1365px arası
+    @media (min-width: $screen-md) and (max-width: ($screen-lg - 1px)) {
+      @content;
+    }
+  }
+  
+  //LARGE
+  @mixin smaller-than-lg {
+    // 1365px ve aşağısı
+    @media (max-width: ($screen-lg - 1px)) {
+      @content;
+    }
+  }
+  
+  @mixin bigger-than-lg {
+    // 1366px ve yukarısı
+    @media (min-width: $screen-lg) {
+      @content;
+    }
+  }
+  
+  @mixin lg {
+    // 1366px ve aşağısı
+    @media (max-width: $screen-lg) {
+      @content;
+    }
+  }
+  
+  @mixin lg-xl {
+    // 1366px ile 1679px arası
+    @media (min-width: $screen-lg) and (max-width: ($screen-xl - 1px)) {
+      @content;
+    }
+  }
+  
+  //XLARGE
+  @mixin smaller-than-xl {
+    // 1679px ve aşağısı
+    @media (max-width: ($screen-xl - 1px)) {
+      @content;
+    }
+  }
+  
+  @mixin bigger-than-xl {
+    // 1680px ve yukarısı
+    @media (min-width: $screen-xl) {
+      @content;
+    }
+  }
+  
+  @mixin xl {
+    // 1680px ve aşağısı
+    @media (max-width: $screen-xl) {
+      @content;
+    }
+  }
+  

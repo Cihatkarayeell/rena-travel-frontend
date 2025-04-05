@@ -1,0 +1,87 @@
+// Breakpoint mixins
+@mixin sm {
+    @media (min-width: $breakpoint-sm) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: $breakpoint-md) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: $breakpoint-lg) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: $breakpoint-xl) {
+        @content;
+    }
+}
+
+// Flexbox mixins
+@mixin flex($direction: row, $justify: flex-start, $align: stretch) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// Grid mixins
+@mixin grid($columns: 1, $gap: $spacing-md) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+}
+
+// Typography mixins
+@mixin font-size($size) {
+    font-size: $size;
+    line-height: calc(#{$size} * 1.5);
+}
+
+// Transition mixin
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+    transition: $property $duration $timing;
+}
+
+// Box shadow mixin
+@mixin shadow($level: 1) {
+    @if $level == 1 {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    } @else if $level == 2 {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    } @else if $level == 3 {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+}
+
+
+  @mixin img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .img-fluid {
+    @include img-fluid;
+  }
+  
+  // Appearance
+  @mixin appearance($value) {
+    -moz-appearance: $value;
+    -webkit-appearance: $value;
+    appearance: $value;
+  }
+  
+  @mixin line-clamp($lines-to-show) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  

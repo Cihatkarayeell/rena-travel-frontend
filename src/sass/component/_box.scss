@@ -1,0 +1,15 @@
+// Box component styles
+.box-img{
+    border: 3px solid #fefefe;
+    border-radius: 2rem;
+    width: 30rem;
+    height: 30rem;
+    margin-top: 4rem;
+    margin-inline: auto;
+    overflow: hidden;
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}

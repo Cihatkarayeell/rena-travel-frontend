@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr" class="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Webpack Frontend Starter Kit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+    <meta name="keywords" content="Webpack, Frontend, Starter Kit" />
+    <meta name="description" content="Modern Frontend Development Starter Kit with Webpack" />
+</head>
+<body class="{% block bodyClass %}{% endblock %}">
+    <div class="wrapper">
+        <div class="content">
+            {% include "partial/header.html" %}
+            <main>
+                {% block content %}{% endblock %}
+            </main>
+            {% include "partial/footer.html" %}
+        </div>
+    </div>
+</body>
+</html>

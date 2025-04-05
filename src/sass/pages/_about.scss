@@ -1,0 +1,32 @@
+// About page styles
+.about {
+  padding: 4rem 0;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  &__item {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    h3 {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    p {
+      color: #666;
+      line-height: 1.6;
+    }
+  }
+}
